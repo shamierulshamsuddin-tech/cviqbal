@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Shamierul Iqbal – AI Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5FA;--surface:#FFFFFF;--ink:#0E1830;--muted:#55607A;--line:#D5DCEB;--accent:#2F6BFF;--accent-ink:#FFFFFF;--det:#FFB020;--glow:rgba(47,107,255,.14);
+  --head:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0A1020;--surface:#121B33;--ink:#E9EEFB;--muted:#9AA6C6;--line:#222E50;--accent:#6E9BFF;--accent-ink:#0A1020;--glow:rgba(110,155,255,.16)}}
+:root[data-theme="dark"]{--bg:#0A1020;--surface:#121B33;--ink:#E9EEFB;--muted:#9AA6C6;--line:#222E50;--accent:#6E9BFF;--accent-ink:#0A1020;--glow:rgba(110,155,255,.16)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 4.5rem);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+.bar{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:3px;background:var(--accent);z-index:40}
+nav.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:3.7rem}
+.mono{font:800 1.1rem var(--head);text-decoration:none;display:grid;place-items:center;width:2.4rem;height:2.4rem;border-radius:10px;background:var(--ink);color:var(--bg)}
+.links{display:flex;gap:.2rem;overflow-x:auto}
+.links a{font:500 .95rem var(--head);text-decoration:none;color:var(--muted);padding:.4rem .75rem;border-radius:99px;white-space:nowrap}
+.links a[aria-current="true"]{background:var(--glow);color:var(--accent)}
+.ghost{font:500 .9rem var(--head);background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:.4rem .9rem;cursor:pointer}
+.hero{padding:4rem 0 4.5rem;display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center}
+.hero h1{font:800 clamp(2.8rem,8.5vw,6rem)/.94 var(--head);letter-spacing:-.045em;margin:0}
+.hero .full{font:500 1.25rem var(--head);color:var(--muted);margin:.7rem 0 0}
+.hero .role{font:800 clamp(1.3rem,3vw,1.8rem) var(--head);color:var(--accent);margin:1.4rem 0 0}
+.hero .lead{max-width:34rem;color:var(--muted);margin:.8rem 0 1.5rem}
+.row{display:flex;gap:.7rem;flex-wrap:wrap}
+.btn{font:500 1rem var(--head);text-decoration:none;padding:.75rem 1.4rem;border-radius:12px;border:1px solid var(--ink);background:none;color:var(--ink);cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.pill{font:500 .88rem var(--head);padding:.25rem .8rem;border-radius:99px;border:1px solid var(--line);background:var(--surface)}
+.focus{margin-top:1.6rem}
+.frame{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px var(--glow),0 0 0 8px var(--glow);max-width:340px;justify-self:center}
+.frame img{display:block;width:100%;height:auto}
+.frame::after{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:var(--det);box-shadow:0 0 18px var(--det);animation:sweep 1.4s .3s ease-in both}
+.det{position:absolute;border:2px solid var(--det);border-radius:4px;animation:pop .5s both}
+.det span{position:absolute;left:-2px;font:600 .72rem/1 var(--body);background:var(--det);color:#1b1300;padding:.25rem .4rem;white-space:nowrap}
+.d1{left:11%;top:22%;width:76%;height:76%;animation-delay:1.2s}.d1 span{bottom:-2px}
+.d2{left:35%;top:24%;width:26%;height:21%;animation-delay:1.6s}.d2 span{bottom:100%;margin-bottom:2px}
+@keyframes sweep{from{top:0;opacity:1}to{top:100%;opacity:0}}
+@keyframes pop{from{opacity:0;transform:scale(1.08)}to{opacity:1;transform:none}}
+.sec{display:grid;grid-template-columns:190px 1fr;gap:2.5rem;padding:3.5rem 0;border-top:1px solid var(--line)}
+.sec>h2{font:800 1.8rem/1.1 var(--head);letter-spacing:-.025em;margin:0;position:sticky;top:5.5rem;align-self:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem}
+.head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.5rem}
+.head h3{font:800 1.4rem var(--head);margin:0}
+.co{font:500 1.05rem var(--head);color:var(--accent)}
+.when{font:500 .95rem var(--head);color:var(--muted)}
+.track{margin-top:1.3rem;padding-left:1rem;border-left:3px solid var(--accent)}
+.track h4{font:800 1.02rem var(--head);margin:0 0 .3rem}
+ul{margin:0;padding-left:1.1rem;color:var(--muted)}li+li{margin-top:.25rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.2rem}
+.chip{font:500 .92rem var(--head);padding:.35rem .95rem;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.proj{border-top:4px solid var(--accent)}
+.proj h3{font:800 1.2rem/1.25 var(--head);margin:0 0 .3rem}
+.proj .meta{font:500 .88rem var(--head);color:var(--muted);margin:0 0 .7rem}
+.proj p{margin:0 0 .9rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.skill h3{font:800 1rem var(--head);margin:0 0 .6rem}
+.edu{display:grid;grid-template-columns:8rem 1fr;gap:1rem;padding:.9rem 0}.edu+.edu{border-top:1px dashed var(--line)}
+.edu h3{font:800 1.1rem var(--head);margin:0}
+.big{font:800 clamp(1.3rem,4.5vw,2.4rem)/1.15 var(--head);letter-spacing:-.03em;word-break:break-word;color:var(--accent);text-decoration:none}
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr;gap:2rem;padding-top:2rem}.frame{max-width:240px;justify-self:start;order:-1}.sec{grid-template-columns:1fr;gap:1.2rem}.sec>h2{position:static}.edu{grid-template-columns:1fr;gap:.2rem}.ghost.t{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.frame::after{display:none}.det{animation:none}}
+@media print{nav.nav,.bar,.btn,.chips,.ghost,body::before{display:none!important}:root{--bg:#fff;--surface:#fff;--ink:#000;--muted:#333;--line:#ccc}.frame{box-shadow:none}.sec>h2{position:static}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.js"></script>
+<script>
+const { useState, useEffect } = React;
+const html = htm.bind(React.createElement);
+
+// Edit this object to update the CV.
+const CV = {
+  name: "Muhammad Shamierul Iqbal", full: "bin Mohd Shamsuddin", role: "AI developer and AI engineer",
+  summary: "Information technology graduate specialising in artificial intelligence, with hands-on experience in machine learning and computer vision. I build intelligent backends, natural language pipelines and precise data retrieval for complex technical problems.",
+  email: "shamierul.shamsuddin@gmail.com", place: "Selangor, Malaysia",
+  focus: ["RAG", "LLMs", "OCR", "Audio AI", "Computer vision"],
+  job: { when: "Feb 2026 – Jul 2026", title: "Systems engineering intern and AI developer", co: "MIMOS Solution",
+    tracks: [
+      ["Systems engineering", ["Built a custom automation tool for the Casemix ticketing system to speed up internal technical support and tracking.", "Handled Level 2 Service Desk operations, diagnosing complex software and systems issues.", "Ran database queries to locate and extract datasets for operational needs.", "Wrote and maintained Operations & Maintenance (O&M2) documentation.", "Supported enterprise data backup, including tape backup and storage workflows."]],
+      ["RAG", ["Worked on retrieval-augmented generation (RAG) so LLM answers draw on source documents."]],
+      ["OCR", ["Deployed OCR pipelines to automate text extraction from unstructured documents and image formats."]],
+      ["Sentiment analysis", ["Built and fine-tuned sentiment analysis models to give actionable insight into user sentiment."]],
+      ["LLM chatbot", ["Developed intelligent chatbots powered by large language models for natural user interactions."]],
+      ["Audio AI", ["Integrated text-to-speech (TTS) and speech-to-text (STT) for natural voice interactions.", "Optimised speech synthesis and recognition workflows to improve response latency and voice accuracy."]],
+      ["OSINT knowledge", ["Worked on an OSINT knowledge base built from open-source information."]]
+    ] },
+  projects: [
+    { name: "DIETLAH: Smart Nutrition and Calories Tracking", meta: "Project lead, final year project, Mar 2025 – Jan 2026", desc: "Nutrition tracker with deep learning food image classification for real-time food detection and calorie estimation. Models trained and tuned in TensorFlow on Google Colab, with Firebase for data.", tech: ["Computer vision", "TensorFlow", "Firebase"] },
+    { name: "Automated Feeding & Growth Tracking for Poultry Farms", meta: "IoT and computer vision, Oct 2024 – Jul 2025", desc: "Embedded IoT system that uses object detection to monitor livestock growth and size in real time. Detection logic written in Python. First runner-up at Lion’s Lair Competition 2024.", tech: ["Computer vision", "Python", "IoT"] }
+  ],
+  skills: [
+    ["Core AI and ML", ["NLP", "LLMs", "RAG", "Sentiment analysis", "OCR", "Chatbots", "TTS", "STT", "Computer vision", "Object detection", "Image classification", "Regression", "OSINT"]],
+    ["Frameworks", ["TensorFlow", "PyTorch", "Flask API", "FastAPI"]],
+    ["Languages", ["Python", "Java", "Dart (Flutter)", "JavaScript", "C++", "HTML", "CSS", "SQL"]],
+    ["Tools", ["VS Code", "PyCharm", "Google Colab", "Eclipse", "Arduino IDE"]],
+    ["Databases and OS", ["Linux", "MySQL", "Firebase", "Supabase", "PostgreSQL"]]
+  ],
+  education: [
+    ["2022 – 2026", "Universiti Malaysia Kelantan (UMK)", "Bachelor of Information Technology (Hons), Artificial Intelligence track"],
+    ["2019 – 2021", "SMK Bukit Gading", "Malaysian Higher School Certificate (STPM), Social Science"]
+  ],
+  extra: [["Certification", "Foundation Certificate in Data Analytics, Google Cloud"], ["Languages", "Malay (fluent), English (professional working proficiency)"]]
+};
+const NAV = [["experience", "Experience"], ["projects", "Projects"], ["skills", "Skills"], ["education", "Education"], ["contact", "Contact"]];
+
+function Nav({ dark, toggle }) {
+  const [active, setActive] = useState("");
+  const [pct, setPct] = useState(0);
+  useEffect(() => {
+    const io = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && setActive(e.target.id)), { rootMargin: "-35% 0px -55% 0px" });
+    NAV.forEach(([id]) => { const el = document.getElementById(id); if (el) io.observe(el); });
+    const onScroll = () => { const d = document.documentElement; setPct(100 * d.scrollTop / Math.max(1, d.scrollHeight - d.clientHeight)); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => { io.disconnect(); window.removeEventListener("scroll", onScroll); };
+  }, []);
+  return html`<div><div class="bar" style=${{ width: pct + "%" }}></div>
+    <nav class="nav" aria-label="Sections"><div class="wrap">
+      <a class="mono" href="#top" aria-label="Back to top">SI</a>
+      <div class="links">${NAV.map(([id, t]) => html`<a key=${id} href=${"#" + id} aria-current=${active === id}>${t}</a>`)}</div>
+      <button class="ghost t" onClick=${toggle}>${dark ? "Light" : "Dark"} mode</button>
+    </div></nav></div>`;
+}
+
+function Hero() {
+  return html`<header class="hero" id="top">
+    <div>
+      <h1>${CV.name}</h1>
+      <p class="full">${CV.full}</p>
+      <p class="role">${CV.role}</p>
+      <p class="lead">${CV.summary}</p>
+      <div class="row">
+        <a class="btn primary" href=${"mailto:" + CV.email}>Email me</a>
+        <a class="btn" href="#projects">See my work</a>
+        <button class="btn" onClick=${() => window.print()}>Save as PDF</button>
+      </div>
+      <div class="row focus">${CV.focus.map(f => html`<span class="pill" key=${f}>${f}</span>`)}</div>
+    </div>
+    <div class="frame">
+      <img src="photo.jpg" alt="Portrait of Muhammad Shamierul Iqbal" width="233" height="287" />
+      <div class="det d1"><span>person 0.98</span></div>
+      <div class="det d2"><span>ai_engineer 0.99</span></div>
+    </div>
+  </header>`;
+}
+
+function Experience() {
+  const j = CV.job;
+  return html`<section class="sec" id="experience"><h2>Experience</h2>
+    <div class="card">
+      <div class="head"><div><h3>${j.title}</h3><div class="co">${j.co}</div></div><div class="when">${j.when}</div></div>
+      ${j.tracks.map(([n, pts]) => html`<div class="track" key=${n}><h4>${n}</h4><ul>${pts.map(p => html`<li key=${p}>${p}</li>`)}</ul></div>`)}
+    </div></section>`;
+}
+
+function Projects() {
+  const all = [...new Set(CV.projects.flatMap(p => p.tech))].sort();
+  const [pick, setPick] = useState(null);
+  const shown = pick ? CV.projects.filter(p => p.tech.includes(pick)) : CV.projects;
+  return html`<section class="sec" id="projects"><h2>University projects</h2><div>
+    <div class="chips" role="group" aria-label="Filter projects by technology">
+      <button class="chip" aria-pressed=${pick === null} onClick=${() => setPick(null)}>All</button>
+      ${all.map(t => html`<button key=${t} class="chip" aria-pressed=${pick === t} onClick=${() => setPick(pick === t ? null : t)}>${t}</button>`)}
+    </div>
+    <div class="grid">${shown.map(p => html`<article class="card proj" key=${p.name}>
+      <h3>${p.name}</h3><p class="meta">${p.meta}</p><p>${p.desc}</p>
+      <div class="tags">${p.tech.map(t => html`<span class="pill" key=${t}>${t}</span>`)}</div></article>`)}</div>
+  </div></section>`;
+}
+
+function Skills() {
+  return html`<section class="sec" id="skills"><h2>Skills</h2>
+    <div class="grid">${CV.skills.map(([k, v]) => html`<div class="card skill" key=${k}><h3>${k}</h3><div class="tags">${v.map(s => html`<span class="pill" key=${s}>${s}</span>`)}</div></div>`)}</div></section>`;
+}
+
+function Education() {
+  return html`<section class="sec" id="education"><h2>Education</h2><div>
+    <div class="card">${CV.education.map(([w, a, b]) => html`<div class="edu" key=${a}><div class="when">${w}</div><div><h3>${a}</h3><div>${b}</div></div></div>`)}</div>
+    <div class="grid" style=${{ marginTop: "1rem" }}>${CV.extra.map(([k, v]) => html`<div class="card skill" key=${k}><h3>${k}</h3><div>${v}</div></div>`)}</div>
+  </div></section>`;
+}
+
+function Contact() {
+  const [ok, setOk] = useState(false);
+  const copy = async () => { try { await navigator.clipboard.writeText(CV.email); setOk(true); setTimeout(() => setOk(false), 2000); } catch (e) { window.location.href = "mailto:" + CV.email; } };
+  return html`<section class="sec" id="contact"><h2>Contact</h2><div>
+    <p style=${{ margin: "0 0 .8rem", color: "var(--muted)" }}>Looking for an AI developer? Send me a message.</p>
+    <a class="big" href=${"mailto:" + CV.email}>${CV.email}</a>
+    <div class="row" style=${{ marginTop: "1.2rem" }}><button class="btn" onClick=${copy} aria-live="polite">${ok ? "Copied" : "Copy email"}</button></div>
+    <p style=${{ marginTop: "1.2rem", color: "var(--muted)" }}>${CV.place}</p>
+  </div></section>`;
+}
+
+function App() {
+  const [theme, setTheme] = useState(null);
+  useEffect(() => { if (theme) document.documentElement.setAttribute("data-theme", theme); }, [theme]);
+  const dark = theme ? theme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return html`<div>
+    <${Nav} dark=${dark} toggle=${() => setTheme(dark ? "light" : "dark")} />
+    <div class="wrap"><${Hero} /><main><${Experience} /><${Projects} /><${Skills} /><${Education} /><${Contact} /></main>
+    <footer>© 2026 ${CV.name}</footer></div></div>`;
+}
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${App} />`);
+</script>
+</body>
+</html>
